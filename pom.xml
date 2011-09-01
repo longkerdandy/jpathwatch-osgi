@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>jpathwatch</groupId>
+    <artifactId>jpathwatch</artifactId>
+    <packaging>bundle</packaging>
+    <version>0.94</version>
+    <name>JPathWatch</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-NativeCode>Windows-x86/jpathwatch-native.dll;osname=WindowsXP;processor=x86,
+                            Windows-amd64/jpathwatch-native.dll;osname=WindowsXP;processor=x86-64,
+                            GNU-Linux-x86/libjpathwatch-native.so;osname=Linux;processor=x86,
+                            GNU-Linux-x86_64/libjpathwatch-native.so;osname=Linux;processor=x86-64,
+                            FreeBSD-i386/libjpathwatch-native.so;osname=FreeBSD;processor=x86,
+                            GNU-MacOSX/libjpathwatch-native-32.dylib;osname=MacOSX;processor=x86,
+                            GNU-MacOSX/libjpathwatch-native-64.dylib;osname=MacOSX;processor=x86-64
+                        </Bundle-NativeCode>
+                        <Export-Package>name.pachler.nio.file</Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
