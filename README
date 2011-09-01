@@ -1,1 +1,4 @@
-This file was created by IntelliJ IDEA 10.5.1 for binding GitHub repository
+JPathWatch-OSGi is a JPathWatch fork (http://jpathwatch.wordpress.com/), build for OSGi compatible and maven support.
+
+JPatchWatch is a Java library for monitoring directories for changes.
+It uses the host platform’s native OS functions to achieve this to avoid polling.
