@@ -16,7 +16,9 @@ Maven usage:
 1. Add repository
         <repository>
             <id>JPathWatch OSGi</id>
-            <url>https://github.com/longkerdandy/jpathwatch-osgi/tree/master/repository/</url>
+            <url>
+                https://github.com/longkerdandy/jpathwatch-osgi/tree/master/repository/
+            </url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
