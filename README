@@ -1,4 +1,31 @@
-JPathWatch-OSGi is a JPathWatch fork (http://jpathwatch.wordpress.com/), build for OSGi compatible and maven support.
+JPathWatch-OSGi is a JPathWatch fork (http://jpathwatch.wordpress.com/),
+build for OSGi compatible and maven support.
 
 JPatchWatch is a Java library for monitoring directories for changes.
 It uses the host platform’s native OS functions to achieve this to avoid polling.
+
+This build includes java source and platform's native library.
+It will only maintain stable release of JPathWatch.
+
+Latest Release: JPathWatch-OSGi v0.94
+
+Download binary package from:
+https://github.com/downloads/longkerdandy/jpathwatch-osgi/jpathwatch-0.94.jar
+
+Maven usage:
+1. Add repository
+        <repository>
+            <id>JPathWatch OSGi</id>
+            <url>https://github.com/longkerdandy/jpathwatch-osgi/tree/master/repository/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+2. Add dependency
+        <dependency>
+            <groupId>jpathwatch</groupId>
+            <artifactId>jpathwatch</artifactId>
+            <version>0.94</version>
+        </dependency>
+
